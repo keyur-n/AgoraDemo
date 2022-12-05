@@ -1,3 +1,3 @@
 # AgoraDemo
  
-Group chat demo - Check branch 
+Group chat demo - Check branch groupchat
