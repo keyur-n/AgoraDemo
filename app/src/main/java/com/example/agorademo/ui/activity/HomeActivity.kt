@@ -123,18 +123,17 @@ class HomeActivity:AppCompatActivity() {
         val listGroups=ChatClient.getInstance().groupManager().allGroups
         Log.e("GroupInfo","GroupJoinedCount=${listGroups.size}")
         for (item in listGroups){
-            Log.e("GroupInfo","GroupJoinedCount=${item.groupName}")
-            Log.e("GroupInfo","GroupJoinedCount=${item.groupId}")
-            Log.e("GroupInfo","GroupJoinedCount=${item.adminList}")
-            Log.e("GroupInfo","GroupJoinedCount=${item.description}")
-            Log.e("GroupInfo","GroupJoinedCount=${item.extension}")
-            Log.e("GroupInfo","GroupJoinedCount=${item.isMemberAllowToInvite}")
-            Log.e("GroupInfo","GroupJoinedCount=${item.isPublic}")
+            Log.e("GroupInfo","groupName=${item.groupName}")
+            Log.e("GroupInfo","groupId=${item.groupId}")
+            Log.e("GroupInfo","adminList=${item.adminList}")
+            Log.e("GroupInfo","description=${item.description}")
+            Log.e("GroupInfo","extension=${item.extension}")
+            Log.e("GroupInfo","isMemberAllowToInvite=${item.isMemberAllowToInvite}")
+            Log.e("GroupInfo","isPublic=${item.isPublic}")
             Log.e("GroupInfo","GroupJoinedCount=${item.maxUserCount}")
-            Log.e("GroupInfo","GroupJoinedCount=${item.muteList}")
-            Log.e("GroupInfo","GroupJoinedCount=${item.members}")
-            Log.e("GroupInfo","GroupJoinedCount=${item.isMsgBlocked}")
-
+            Log.e("GroupInfo","muteList=${item.muteList}")
+            Log.e("GroupInfo","members=${item.members}")
+            Log.e("GroupInfo","isMsgBlocked=${item.isMsgBlocked}")
         }
         val listChat=listGroups.map {
             ChatListData(isGroup = true, chatId = it.groupId,chatName=it.groupName)
@@ -146,17 +145,17 @@ class HomeActivity:AppCompatActivity() {
 
         for (conversation in allConversion){
             val item=conversation.value
-            Log.e("GroupInfo","GroupJoinedCount=${item.isGroup}")
-            Log.e("GroupInfo","GroupJoinedCount=${item.allMsgCount}")
-            Log.e("GroupInfo","GroupJoinedCount=${item.allMessages}")
-            Log.e("GroupInfo","GroupJoinedCount=${item.type}")
-            Log.e("GroupInfo","GroupJoinedCount=${item.extField}")
-            Log.e("GroupInfo","GroupJoinedCount=${item.isChatThread}")
-            Log.e("GroupInfo","GroupJoinedCount=${item.lastMessage}")
-            Log.e("GroupInfo","GroupJoinedCount=${item.latestMessageFromOthers}")
-            Log.e("GroupInfo","GroupJoinedCount=${item.unreadMsgCount}")
-            Log.e("GroupInfo","GroupJoinedCount=${item.conversationId()}")
-            Log.e("GroupInfo","GroupJoinedCount=${item.markAllMessagesAsRead()}")
+            Log.e("GroupInfo","isGroup=${item.isGroup}")
+            Log.e("GroupInfo","allMsgCount=${item.allMsgCount}")
+            Log.e("GroupInfo","allMessages=${item.allMessages}")
+            Log.e("GroupInfo","type=${item.type}")
+            Log.e("GroupInfo","extField=${item.extField}")
+            Log.e("GroupInfo","isChatThread=${item.isChatThread}")
+            Log.e("GroupInfo","lastMessage=${item.lastMessage}")
+            Log.e("GroupInfo","latestMessageFromOthers=${item.latestMessageFromOthers}")
+            Log.e("GroupInfo","unreadMsgCount=${item.unreadMsgCount}")
+            Log.e("GroupInfo","conversationId=${item.conversationId()}")
+//            Log.e("GroupInfo","markAllMessagesAsRead=${item.markAllMessagesAsRead()}")
         }
     }
     override fun onDestroy() {
