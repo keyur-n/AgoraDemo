@@ -1,4 +1,4 @@
-package com.example.agorademo
+package com.example.agorademo.ui.activity
 
 import android.content.Intent
 import android.os.Bundle
@@ -10,6 +10,7 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.agorademo.R
 import com.example.agorademo.model.getCurrentUser
 import com.example.agorademo.utils.USER_LOGIN_TOKEN
 import io.agora.CallBack
@@ -44,11 +45,13 @@ class MainActivity : AppCompatActivity() {
         initView()
         initSDK()
         initListener()
+
     }
     private fun initView() {
         (findViewById<View>(R.id.tv_log) as TextView).movementMethod =
             ScrollingMovementMethod()
     }
+
     private fun initSDK() {
         val options = ChatOptions()
         // Gets your App Key from Agora Console.
@@ -147,7 +150,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
     fun videoCall(view: View?){
-        startActivity(Intent(this,VideoActivity::class.java))
+        startActivity(Intent(this, VideoActivity::class.java))
     }
 
     // Sends the first message.
@@ -157,7 +160,9 @@ class MainActivity : AppCompatActivity() {
         val content =
             (findViewById<View>(R.id.et_msg_content) as EditText).text.toString().trim { it <= ' ' }
         // Creates a text message.
-        val message = ChatMessage.createTextSendMessage(content, toSendName)
+        val message = ChatMessage.createTextSendMessage(content, "TestGroup1")
+        message.setChatType(ChatMessage.ChatType.GroupChat);
+
         // Sets the message callback before sending the message.
         message.setMessageStatusCallback(object : CallBack {
             override fun onSuccess() {

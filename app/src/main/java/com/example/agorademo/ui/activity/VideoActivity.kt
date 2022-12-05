@@ -1,4 +1,4 @@
-package com.example.agorademo
+package com.example.agorademo.ui.activity
 
 import android.Manifest
 import android.content.pm.PackageManager
@@ -10,6 +10,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import com.example.agorademo.R
 import com.example.agorademo.model.getCurrentUser
 import com.example.agorademo.utils.USER_ID_1
 import io.agora.rtc2.*

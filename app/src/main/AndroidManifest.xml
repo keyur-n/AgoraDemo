@@ -25,7 +25,7 @@
         android:theme="@style/Theme.AgoraDemo"
         tools:targetApi="31">
         <activity
-            android:name=".LoginActivity"
+            android:name=".ui.activity.UserLoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -34,12 +34,22 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.activity.MainActivity"
             android:exported="false">
 
         </activity>
         <activity
-            android:name=".VideoActivity"
+            android:name=".ui.activity.VideoActivity"
+            android:exported="false">
+
+        </activity>
+        <activity
+            android:name=".ui.activity.HomeActivity"
+            android:exported="false">
+
+        </activity>
+        <activity
+            android:name=".ui.activity.ChatActivity"
             android:exported="false">
 
         </activity>

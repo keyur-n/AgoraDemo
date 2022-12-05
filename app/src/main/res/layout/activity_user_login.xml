@@ -28,36 +28,12 @@
                 android:text="User 3"
                 />
         </RadioGroup>
-        <EditText
-            android:id="@+id/etGroup"
-            android:layout_width="match_parent"
-            android:enabled="false"
-            android:clickable="false"
-            android:focusable="false"
-            android:longClickable="false"
-            android:text="TestGroup1"
-            android:focusableInTouchMode="false"
-            android:layout_height="wrap_content"
-            android:hint="Enter Chat group"
-            android:layout_marginTop="20dp"/>
-        <Button
-            android:id="@+id/btnCreateGroup"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="Create Group" />
-        <Button
-            android:id="@+id/btnJoinGroup"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="Join Group" />
+
         <Button
             android:id="@+id/btn_sign_in"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:onClick="signInWithToken"
             android:text="Sign in" />
 
     </LinearLayout>
